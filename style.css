@@ -3,6 +3,10 @@
     padding:0;
 }
 
+body {
+    background-color: hsl(226, 43%, 10%);
+}
+
 
 .container{
     width:100%;
@@ -17,7 +21,7 @@
 
 .main-card{
     width:80%;
-    height:60%;
+    height:80%;
     border-radius:10px;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
@@ -53,7 +57,7 @@
 .work, .play, .study, .exercise, .social, .self-care{
     border-radius: 10px;
     display: grid;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
     
 }
 
@@ -89,22 +93,30 @@
     background-color: hsl(235, 46%, 20%);
     border-radius: 10px;
     padding: 10px;
+    grid-row: 2/4;
 }
 
 .activity {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .head {
     overflow: hidden;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+}
+
+.hours {
+   
 }
 
 .hours h1 {
     font-size: 2rem;
     font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .text h1 {
@@ -125,17 +137,27 @@
     line-height: 2;
 }
 
+.head img {
+
+}
+
 /* Media Query for screens smaller than 768px */
 @media (max-width: 767px) {
     body {
         background-color: hsl(235, 21%, 11%);
+    }
+
+    .container {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
  
     .main-card {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(6, 1fr);
       height: 100vh;
-      margin-top: 20px;
+      margin: 20px;
+
     }
     
     .profile-card {
